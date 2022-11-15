@@ -1,6 +1,7 @@
 FROM      mhart/alpine-node:6.10
 
 # Options:
+ARG       NAME=
 ARG       NODE_ENV=production
 ENV       NODE_ENV $NODE_ENV
 ENV       APP_HOME /hello-world
