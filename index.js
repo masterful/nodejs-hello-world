@@ -3,7 +3,7 @@ const http = require('http');
 // This server will respond to all requests (regardless of path) with "hello world"
 const server = http.createServer((request, response) => {
   response.writeHead(200, { "Content-Type": "text/plain" });
-  response.end("hello world, updated");
+  response.end(`hello world, ${process.env.NAME}`);
 
   // Put a message in the logs as well unless that's been disabled:
   if (process.env.NO_DEBUG) { return; }
